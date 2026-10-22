@@ -1,0 +1,15 @@
+Utvecklingsfasen - filer för publicering
+
+Filer:
+  index.html            själva appen (allt innehåll finns i den här filen)
+  manifest.webmanifest  namn, färger och ikoner när appen läggs på hemskärmen
+  icon-192.png, icon-512.png, apple-touch-icon.png, favicon-32.png   ikoner
+
+Publicera:
+1. Skapa ett nytt repo på GitHub.
+2. Packa upp zip-filen och dra in FILERNA (inte mappen) via Add file > Upload files.
+3. I Vercel: Add New > Project > välj repot. Ingen build-kommando behövs.
+
+Uppdatera:
+  Byt ut index.html i GitHub-repot med den nya filen. Vercel publicerar om automatiskt.
+  Behåll alla filer tillsammans i repots översta nivå.
