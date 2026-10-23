@@ -379,7 +379,7 @@ ${percHtml()}<button class="go" id="sw">${S.ov?"Följ veckoplan igen":"Byt tema 
 document.addEventListener("click",e=>{const t=e.target.closest("button,[data-ex],[data-x],[data-xc],[data-cp],[data-pc],[data-b]");if(!t)return;
 if(t.dataset.g!=null){D.t=[];D.o=["","","",""];D.ex=[];D.cp=[];D.xc=[];S.g=+t.dataset.g;S.ov=null;M=loadM();M.fp=[];M.kf=[]}
 else if(t.dataset.w){S.w=Math.min(52,Math.max(1,S.w+ +t.dataset.w));S.ov=null;S.pick=false;rst()}
-else if(t.dataset.ex){S.ex=S.ex==t.dataset.ex?"":t.dataset.ex}else if(t.dataset.x){return}else if(t.dataset.add){addEx(+t.dataset.bi,t.dataset.add)}else if(t.dataset.rmx){D.ex[+t.dataset.rmx]=null;save()}else if(t.dataset.xc){S.xo=!S.xo}else if(t.dataset.cp){S.cp=S.cp==t.dataset.cp?"":t.dataset.cp}else if(t.dataset.pc){S.pc=!S.pc}else if(t.dataset.b!=null){S.open=S.open==+t.dataset.b?-1:+t.dataset.b}
+else if(t.dataset.ex){S.ex=S.ex==t.dataset.ex?"":t.dataset.ex}else if(t.dataset.x){return}else if(t.dataset.add){addEx(+t.dataset.bi,t.dataset.add)}else if(t.dataset.rmx){const bi=+t.dataset.rmx;D.ex[bi]=null;D.o[bi]="";save()}else if(t.dataset.xc){S.xo=!S.xo}else if(t.dataset.cp){S.cp=S.cp==t.dataset.cp?"":t.dataset.cp}else if(t.dataset.pc){S.pc=!S.pc}else if(t.dataset.b!=null){S.open=S.open==+t.dataset.b?-1:+t.dataset.b}
 else if(t.dataset.t){S.ov=t.dataset.t;S.pick=false;rst()}
 else if(t.id=="shr"){shareLast().then(r=>{const m=document.getElementById("msg");if(m)m.textContent=r=="declined"?"Avbrutet.":"PDF klar."});return}else if(t.id=="mb"){S.mat=!S.mat;S.top=1}else if(t.dataset.mf!=null){M.f=+t.dataset.mf;saveM()}else if(t.id=="madd"){M.b.push("");saveM()}else if(t.id=="mpdf"){matchPdf();return}else if(t.id=="bb"){S.bld=!S.bld;S.top=1}
 else if(t.id=="pdf"){makePdf();return}
